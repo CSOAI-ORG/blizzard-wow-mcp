@@ -1,0 +1,42 @@
+name: blizzard-wow-mcp
+description: MEOK GAMING — World of Warcraft MCP server. Auction house analytics, market intelligence, cross-realm arbitrage, crafting profit, guild analytics, farming route optimizer. 10 tools, COAI-certified, INTELLIGENCE_ONLY (no automation, no botting). SOV3 sovereign data export. Part of the MEOK/CSOAI 28-hive gaming mesh.
+author: MEOK AI Labs <gaming@meok.ai>
+homepage: https://github.com/CSOAI-ORG/blizzard-wow-mcp
+license: MIT
+keywords:
+  - mcp
+  - wow
+  - world-of-warcraft
+  - auction-house
+  - gaming
+  - market-intelligence
+  - meok-ai-labs
+  - csoai
+  - coai-certified
+  - ethical-gaming-ai
+runtime: typescript
+entry: dist/index.js
+config:
+  type: object
+  properties:
+    BLIZZARD_CLIENT_ID:
+      type: string
+      description: Blizzard API OAuth client ID (optional, demo mode if absent)
+      default: ""
+    BLIZZARD_CLIENT_SECRET:
+      type: string
+      description: Blizzard API OAuth client secret (optional, demo mode if absent)
+      default: ""
+  required: []
+startCommand:
+  type: stdio
+  configSchema: ./configSchema.json
+  commandFunction: |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        BLIZZARD_CLIENT_ID: config.BLAZZARD_CLIENT_ID || '',
+        BLIZZARD_CLIENT_SECRET: config.BLAZZARD_CLIENT_SECRET || ''
+      }
+    })

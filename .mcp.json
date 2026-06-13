@@ -1,0 +1,32 @@
+{
+  "name": "blizzard-wow-mcp",
+  "description": "MEOK GAMING — World of Warcraft MCP Server. Auction house analytics, market intelligence, cross-realm arbitrage, crafting profit, guild analytics, farming route optimizer. 10 tools, COAI-certified, INTELLIGENCE_ONLY (no automation, no botting). SOV3 sovereign data export. Part of the MEOK/CSOAI 28-hive gaming mesh.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/CSOAI-ORG/blizzard-wow-mcp",
+  "license": "MIT",
+  "author": "MEOK AI Labs <gaming@meok.ai>",
+  "type": "mcp",
+  "runtime": "node",
+  "transport": "stdio",
+  "entry": "dist/index.js",
+  "package": "@csoai-org/blizzard-wow-mcp",
+  "tools": 10,
+  "games": ["wow"],
+  "coai_gates": ["INTELLIGENCE_ONLY", "NO_AUTOMATION", "AUDIT_TRAIL", "ETHICAL_CHECK", "PLAYER_CONTROL", "RMT_MONITORING", "COMPLIANCE", "TRANSPARENCY", "COMMUNITY", "KNOWLEDGE_BASE"],
+  "sov3": {
+    "enabled": true,
+    "attestation_endpoint": "https://meok-attestation-api.vercel.app/sign",
+    "data_export": "player_owned"
+  },
+  "tags": ["mcp", "wow", "world-of-warcraft", "auction-house", "gaming", "market-intelligence", "meok-ai-labs", "csoai", "coai-certified", "ethical-gaming-ai"],
+  "endpoints": {
+    "smithery": "https://smithery.ai/server/@csoai-org/blizzard-wow-mcp",
+    "npm": "https://www.npmjs.com/package/@csoai-org/blizzard-wow-mcp",
+    "github": "https://github.com/CSOAI-ORG/blizzard-wow-mcp"
+  },
+  "hive": {
+    "name": "meok-gaming-hive",
+    "role": "wow-market-intelligence",
+    "mesh": "MEOK-28-hive"
+  }
+}

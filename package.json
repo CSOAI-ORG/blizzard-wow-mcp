@@ -1,0 +1,59 @@
+{
+  "name": "@csoai-org/blizzard-wow-mcp",
+  "version": "1.0.0",
+  "description": "MEOK GAMING — World of Warcraft MCP Server. Auction house analytics, market intelligence, crafting optimization, inventory valuation. Ethical AI for Azeroth's economy. Part of the MEOK/CSOAI gaming MCP mesh.",
+  "homepage": "https://github.com/CSOAI-ORG/blizzard-wow-mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "world-of-warcraft",
+    "wow",
+    "auction-house",
+    "gaming",
+    "mmo",
+    "meok-ai-labs",
+    "csoai",
+    "blizzard-api"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "blizzard-wow-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0",
+    "tsx": "^4.19.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/blizzard-wow-mcp.git"
+  },
+  "author": "MEOK AI Labs <gaming@meok.ai>",
+  "bugs": {
+    "url": "https://github.com/CSOAI-ORG/blizzard-wow-mcp/issues"
+  }
+}

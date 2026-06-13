@@ -393,7 +393,7 @@ class GamingHive {
         return this.generateDemoAuctions(realm);
       }
 
-      const data = await response.json();
+      const data: any = await response.json();
       this.lastFetch.set(cacheKey, Date.now());
       return data.auctions || [];
     } catch (error) {
@@ -407,7 +407,7 @@ class GamingHive {
         `${BLIZZARD_API_BASE}/data/wow/search/connected-realm?namespace=dynamic-${region}&realms.name.en_US=${encodeURIComponent(realm)}&access_token=${token}`
       );
       if (!response.ok) return null;
-      const data = await response.json();
+      const data: any = await response.json();
       return data.results?.[0]?.data?.id || null;
     } catch {
       return null;
@@ -729,7 +729,7 @@ async function handleCraftingProfit(args: any): Promise<any> {
     "Dawnlight": 220, "Maelstrom Sapphire": 200, "Gem Chip": 5, "Light Parchment": 0.5,
     "Roseate Pigment": 12, "Sallow Pigment": 45, "Imbued Silkweave": 35, "Runic Catgut": 8,
     "Gravenscale": 85, "Demonsteel Bar": 55, "Fatty Bearsteak": 3, "Big Gamy Ribs": 4,
-    "River Onion": 2, "Demonsteel Bar": 55,
+    "River Onion": 2,
   };
 
   let allRecipes = profession === "all" ? Object.values(recipes).flat() : (recipes[profession] || []);
